@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+    
+        // for(i=1;i<=100;i++){
+        //     document.write(i,"<br>")
+        // }
+        // for(let a=1; a<11; a++){
+        //     for(let b=1;b<=a;b++){
+        //         document.write("*")
+        //     }
+        //     document.write("<br>")
+        // }
+        for(let a=1; a<=4; a++){
+            for(let b=a;b<=4;b++){
+                document.write(b);
+            }
+            document.write("<br>")
+        }
+        c=11
+        f=0;
+        for (let d=1;d<=4;d++){
+            for (let e=0; e<1;e++ ){
+                 document.write(c**f)
+                 f++;
+                
+            }
+            
+            document.write('<br>')
+        }
+
+    </script> -->
+    <script>
+        
+
+        function Student(name){
+            this.name=name;
+            var marks=0;
+            this.updatemarks=function(a){
+              marks+=a;
+            }
+            this.getmarks=function(){
+                return marks;
+            }
+           
+        }
+        Student.prototype.result = function(){
+          if (this.getmarks() >= 33){
+            return "Pass"
+          }
+          else{
+            return "Fail"
+          }
+        }
+        let stu1 = new Student(" Nitin");
+        stu1.updatemarks(50);
+
+        document.write(stu1.name + " ")
+        // document.write(stu1.getmarks() +" ")
+        document.write(stu1.result())
+
+
+
+
+        let obj = {
+        name: "Nitin",
+        show: function(){
+            setTimeout(()=>console.log("Hello! " + this.name),2000);
+         }
+        }
+        obj.show();
+
+
+
+
+        // function show(){
+        //     console.log(this)
+        // }
+        // let objs = {show}
+        // objs.show();
+        // let ref = objs.show;
+        // ref()
+
+    </script>
+</body>
+</html>
