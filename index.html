@@ -25,5 +25,31 @@
 
         count([1,2,3,4,5,6,7]);
     </script>
+
+
+<script>
+    let cart=[
+        {price:230,qty:1},
+        {price:570,qty:1},
+        {price:490,qty:1},
+        {price:740,qty:1}
+    ];
+    let total = cart.reduce((sum,item)=>{
+        return sum+(item.price*item.qty);
+    },0);
+    let totelItem = cart.reduce((count,item)=>{
+        return count+item.qty;
+    },0);
+    let discountPercent ;
+    if(totelItem>=4){
+        discountPercent = 40;
+    }
+    else{
+        discountPercent=0;
+    }
+    let discountAmount = (total*discountPercent)/100;
+    let paybleAmount = (total-discountAmount);
+    document.write(paybleAmount)
+</script>
 </body>
 </html>
