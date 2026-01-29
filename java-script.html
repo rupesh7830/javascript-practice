@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --main-text-color: #f0f0f0;
+            --main-bg-color: #dbdbdb;
+            --main-bg-color2: #f51313;
+            --main-bg-color3: black;
+
+        }
+        table {
+            width: 50%;
+            margin: auto;
+            text-align: center;
+            font-size: 20px;
+            border-collapse: collapse;
+        }
+        table tr:nth-child(even) {
+            background-color: var(--main-bg-color);
+            
+        }
+        table tr:first-child {
+            background-color: var(--main-bg-color2);
+            color: var(--main-text-color);
+            font-weight: bold;
+        }
+        table tr:last-child {
+            background-color: var(--main-bg-color3);
+            color: var(--main-text-color);
+            font-weight: bold;
+            border-right:transparent;
+        }
+    </style>
+</head>
+<body>
+    <!-- <script>
+        let subject = ["S.R","Hindi","Computer","Maths","Science"];
+        let i = 0;
+        let des = "<table border='2' cellpadding='10' cellspacing='0'><tr>";
+        while(i < subject.length) {
+            des += "<td>" + subject[i] + "</td>";
+            i++;
+        }
+        des += "</tr><tr>";
+            let marks = [1., 88, 92, 85, 90];
+            let j = 0;
+            while(j < marks.length) {
+                des += "<td>" + marks[j] + "</td>";
+                j++;
+            }
+        des += "</tr><tr>";
+            let marks2 = [2., 78, 72, 75, 80];
+            let k = 0;
+            while(k < marks2.length) {
+                des += "<td>" + marks2[k] + "</td>";
+                k++;
+            }
+        des += "</tr><tr>";
+            let marks3 = [3., 88, 82, 85, 80];
+            let l = 0;
+            while(l < marks3.length) {
+                des += "<td>" + marks3[l] + "</td>";
+                l++;
+            }
+        des += "</tr><tr>";
+            let grade = [" Grade", "A+", "A", "B", "A"];
+            let m = 0;
+            while(m < grade.length) {
+                des += "<td>" + grade[m] + "</td>";
+                m++;
+            }
+        des += "</tr></table>";
+        document.write(des); -->
+    </script>
+
+    <!-- <script>
+        for (let n=1; n<=5; n++){
+            for (let p=n; p<n+5; p++){
+                document.write(p);
+            
+            }
+            document.write("<br>");
+        }
+        
+    </script> -->
+    <br>
+
+    <script>
+//      for (let a=4; a>0; a--){
+//         for (let b=a;b<=4;b++){
+//             document.write(b," ");
+//         }
+//         document.write("<br>");
+//      } 
+//         for (let a=1; a<=4; a++){
+//             for (let b=1; b<=a; b++){
+//                 document.write(b," ");
+//             }
+//             document.write("<br>");
+//         }
+
+//         for (let i = 4; i>0; i--) {
+//   for (let j = i; j <=4; j++) {
+//     document.write(j + " ");
+//   }
+//   document.write("<br>");
+// }
+
+//   for (let i = 1; i <= 4; i++) {
+//   for (let j = i; j >=1; j--) {
+//     document.write(j + " ");
+//   }
+//   document.write("<br>");
+// }
+// '<br>'
+// for(let k=1; k<=6; k++){
+//     for(let l=1;l<=k;l++){
+//         document.write(l," ");
+//     }
+//     document.write("<br>");
+// }
+
+
+// let fruits=["mango","orange","grapes","guava"];
+// for(friut of fruits){
+//     document.write(friut+" " +"<br>");
+// }
+
+
+// let student = { name: "Rupesh", age: 22, city: "Firozabad" };
+//  for(let key in student){
+//     if(key==="city"){
+//     document.write(student[key] + "<br>" );
+//  }
+//     }
+
+//     let data = { x: 5, y: 10 };
+
+// for (let key in data) {
+//   data[key] = data[key] * 2;
+// }
+
+// console.log(data);
+
+
+// let mobile = {brand:"vivo y93", price: 45000, color:"purpal"}
+// for(let key in mobile){
+//     if(key==="price"){
+//         mobile[key]= mobile[key]-5000;
+//     }
+//     console.log(key + " : " + mobile[key]);
+// }
+
+
+// let nums = { a: 2, b: 4, c: 6 };
+// for (let key in nums) {
+//     nums[key] = nums[key]*2;
+// }
+// console.log(nums);
+
+// let obj = { x: 1, y: 2 };
+
+// for (let key in obj) {
+//   if (key === "x") {
+//     console.log(obj[key]);
+//   }
+// }
+
+// let objs = { a: 5, b: 10 };
+
+// for (let key in objs) {
+//   console.log(objs[key]);
+// }
+
+// let students = {
+//   name: "Rupesh",
+//   age: 22,
+//   city: "Firozabad",
+//   marks: 80
+// };
+//  let total = 0;
+// for (let key in students) {
+//   if (typeof students[key] === "number") {
+//     total += students[key];
+//   }
+// }
+// console.log(total);
+
+// let cart = [499, 1299, 799, 250];
+// let sum = 0;
+// for (let price of cart){
+//     sum += price;
+// }
+// console.log(sum);
+
+// let mark = [45, 67, 89, 32, 90];
+// for (let score of mark){
+//     if(score>=40){
+//         console.log(score);
+//     }
+// }
+
+    
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    function greet(name) {
+        return "Hello, " + name + "!";
+    }
+    document.write(greet("Rupesh"));
+    document.writeln("<br>");
+    document.write(greet("Aashi"));
+
+    function checkLogin(islogin){
+        return islogin ? "Welcome !" : "Please log in.";
+    }
+    document.writeln("<br>");
+    document.write(checkLogin(false));
+
+    function goodMorning(){
+        return "Good Morning!";
+    }
+    document.write(goodMorning());
+
+    function greeting(name){
+        return "Hello ," + name + "!";
+    }
+    document.write(greeting("Aashi"));
+
+    function add(a,b){
+        return a+b;
+    }
+    document.write(add(5,10));
+    document.writeln("<br>");
+
+    function evenOdd(num){
+        return num%2===0 ? "Even" : "Odd";
+    }
+    document.write(evenOdd(7)); 
+    function percentage(marks){
+        return marks>=90 ? "Excellent" :marks>=60 ? "Good" : "Needs Improvement";
+    }
+    document.write(percentage(45));
+
+    function orderFood(foodname,callback){
+        document.write("You have ordered: " + foodname +".<br>");
+        callback(foodname);
+
+    }
+    function showOrder(foodname){
+        document.write("Your order for " + foodname + " is being prepared.");
+    }
+    document.writeln("<br>");
+    document.write(orderFood("Pizza", showOrder));
+</script>
+
+
+
+
+
+<script>
+    document.writeln("<br>");
+
+    function Person(name, language){
+        this.name = name;
+        this.language = language;
+        if(language === "hindi"){
+            document.write("Indian User");
+        }
+        else{
+            document.write("Foreign User");
+        }
+    }
+    let detail = new Person(" Rupesh", "hindi");
+    document.writeln("<br>");
+    let detail2 = new Person(" John", "English");
+    document.write(detail.name + " " +  "<br>");
+    document.write(detail2.name + " speaks " + detail2.language + ".");
+</script>
+
+</body>
+</html>

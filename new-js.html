@@ -1,0 +1,83 @@
+git <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function Person(name,mobile,address,email){
+            var _name = name;
+            var _mobile = mobile;
+            var _address = address;
+            var _email = email;
+            this.updateName = function(newName){
+                _name = newName;
+            }
+            this.getName = function(){
+                return _name;
+            }
+            this.updateMobile = function(newMobile){
+                _mobile = newMobile;
+            }
+            this.getMobile = function(){
+                return _mobile;
+            }
+            this.updateAddress = function(newAddress){
+                _address = newAddress;
+            }
+            this.getAddress = function(){
+                return _address;
+            }
+            this.updateEmail = function(newEmail){
+                _email = newEmail;
+            }
+            this.getEmail = function(){
+                return _email;
+            }
+        }
+       let p1 = new Person("John Doe","1234567890","123 Main St","john@example.com");
+       p1.updateName("Jane Doesa");
+         document.write(p1.getName() + "<br>");
+         document.write(p1.getMobile() + "<br>");
+         document.write(p1.getAddress() + "<br>");
+         document.write(p1.getEmail() + "<br>");
+
+         document.write("<br>");
+
+
+
+
+
+         function BankAcount(acountHolder){
+            let balance = 0;
+            this.acountHolder = acountHolder;
+            this.deposit = function(amount){
+                    balance += amount;
+            }
+            this.withdraw = function(amount){
+                if(amount <= balance){
+                    balance -= amount;
+                } else {
+                    document.write("Insufficient funds<br>");
+                }
+            }
+            this.getBalance = function(){
+                return balance;
+            }
+         }
+
+        let acc = new BankAcount("John Doe");
+        document.write("Account Holder: " + acc.acountHolder + "<br>");
+        acc.deposit(5000);
+        document.write("Initial Balance: " + acc.getBalance() + "<br>");
+        acc.withdraw(2000);
+        document.write("Balance after withdrawal: " + acc.getBalance() + "<br>");
+        
+
+    </script>
+</body>
+</html>
