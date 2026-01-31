@@ -76,7 +76,129 @@ git <!DOCTYPE html>
         document.write("Initial Balance: " + acc.getBalance() + "<br>");
         acc.withdraw(2000);
         document.write("Balance after withdrawal: " + acc.getBalance() + "<br>");
-        
+
+
+
+        document.write("<br>");
+
+        let order = {
+            orderId : 101,
+            Customer : {
+                name : "Alice",
+                contact : 8056345012,
+                address : {
+                    city : "New York",
+                    state : "NY",
+                }
+            },
+            items : [
+                {itemName : "Laptop", price : 1200, quantity : 1},
+                {itemName : "Mouse", price : 25, quantity : 2},
+                {itemName : "Keyboard", price : 45, quantity : 1},
+            ]
+
+        };
+
+        document.write("Order ID: " + order.orderId + "<br>");
+        document.write("Customer Name: " + order.Customer.name + "<br>");
+        document.write("Customer Address: " + order.Customer.address.city + ", " + order.Customer.address.state + "<br>");
+
+        document.write("Items Ordered:<br>");
+        for(item of order.items){
+            document.write("Order Item : " + item.itemName + "<br>");
+        }
+        document.write("<br>");
+
+        let toatalAmount = order.items.reduce((sum, item)=> sum + (item.price*item.quantity),0);
+        document.write("Total Amount: " + toatalAmount + "<br>");
+
+
+        let result = order.items.reduce((acc, item)=>{
+            acc[item.itemName] = item.quantity;
+            return acc;
+        }, {});
+        console.log(result);
+
+
+
+
+
+
+
+        let orders = {
+  items: [
+    { product: "mobile", price: 15000 },
+    { product: "headphone", price: 2000 },
+    { product: "charger", price: 1000 }
+  ]
+};
+for(item of orders.items){
+    console.log("Product: " + item.product + ", Price: " + item.price);
+}
+
+let results = orders.items.reduce((acc, item)=>{
+    if(item.price > 2000){
+     acc.highPrices[item.product] = item.price;
+    }
+    acc.total += item.price;
+    acc.product[item.product] = item.price;
+    acc.highPrice = item.price > acc.highPrice ? item.price : acc.highPrice;
+    return acc;
+},{total: 0, product: {}, highPrices: {}, highPrice: 0});
+console.log(results)
+
+
+let items = [
+  { product: "mobile", price: 15000 },
+  { product: "mobile", price: 15000 },
+  { product: "charger", price: 1000 }
+];
+
+let outPut = items.reduce((acc, item)=>{
+    if(acc[item.product]){
+        acc[item.product].quantity += 1;
+    } else {
+        acc[item.product] = { price: item.price, quantity: 1 };         
+    }
+    return acc;
+}, {});
+console.log(outPut);
+
+
+
+
+
+
+// Array Metod
+
+let nums = [5, 10, 15, 20];
+for(let num of nums){
+    console.log(num);
+}
+nums.pop();
+nums.push(25);
+console.log(nums);
+console.log(nums.length)
+
+
+
+let itemss = [
+  { product: "mobile", price: 15000 },
+  { product: "charger", price: 1000 }
+];
+let names = itemss.map(item => {
+    return {
+        product : item.product,
+        price : item.price
+    }
+})
+console.log(names)
+
+
+let numss = [2, 4, 6, 8];
+let squares = numss.map(num =>num*num);
+console.log(squares);
+
 
     </script>
 </body>
