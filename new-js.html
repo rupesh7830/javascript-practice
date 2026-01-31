@@ -47,7 +47,6 @@ git <!DOCTYPE html>
          document.write(p1.getEmail() + "<br>");
 
          document.write("<br>");
-         
 
 
 
@@ -71,14 +70,80 @@ git <!DOCTYPE html>
         //     }
         //  }
 
-        let acc = new BankAcount("John Doe");
-        document.write("Account Holder: " + acc.acountHolder + "<br>");
-        acc.deposit(5000);
-        document.write("Initial Balance: " + acc.getBalance() + "<br>");
-        acc.withdraw(2000);
-        document.write("Balance after withdrawal: " + acc.getBalance() + "<br>");
+        // let acc = new BankAcount("John Doe");
+        // document.write("Account Holder: " + acc.acountHolder + "<br>");
+        // acc.deposit(5000);
+        // document.write("Initial Balance: " + acc.getBalance() + "<br>");
+        // acc.withdraw(6000);
+        // document.write("Final Balance: " + acc.getBalance() + "<br>");
+
+
+
+
+
+
+        // for(let i=5;i>=1;i--){
+        //     setTimeout(()=>console.log(i), (5-i)*2000)
+        // }
         
 
+        let cart = [
+            {price:270,qty:1},
+            {price:490,qty:1},
+            {price:890,qty:2},
+            {price:720,qty:1}
+        ];
+        let total = cart.reduce((sum,item)=>{
+            return sum+(item.price*item.qty)
+        },0)
+        console.log(total)
+
+
+
+
+
+        let arr = [2,5,2,4,6,1,3 ,5];
+        let duplicate = arr[0];
+        let duplicateNum = []
+        for(let i=0; i<arr.length;i++){
+            for(j=i+1;j<arr.length;j++){
+                if(arr[i]===arr[j]){
+                    console.log("Duplicate:", arr[i])
+                    duplicateNum.push(arr[i]+" ");
+                    document.write(duplicateNum)
+                }
+            }
+        }
+        document.write("<br>")
+
+        function change(arry){
+            arry.push(99)
+        }
+        let a =[1,2];
+        change(a);
+        console.log(a);
+
+
+        function addValue(arr, ...values){
+            arr.push(...values)
+        }
+        let nums = [3,5,2];
+        addValue(nums, 3, 5, 8, 9,);
+        document.write(nums);
+        
+
+        let ch = "astha Animation";
+        let vowels = "aeiou";
+        let count = 0;
+        for(x of ch.toLowerCase()){
+            if(vowels.includes(x)){
+                count++;
+            }
+            else if(vowels===includes(x)){
+                count++
+            }
+        }
+        document.write(count)
     </script>
 </body>
 </html>
